@@ -9,35 +9,18 @@ public class Customer {
         this.name = name;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Address getAddress() {
-        return address;
-    }
-
     public void setAddress(Address address) {
         this.address = address;
-    }
-
-    public Trip getTrip() {
-        return trip;
     }
 
     public void assignTrip(Trip trip) {
         this.trip = trip;
     }
 
-    public void getInfo() {
-        System.out.println("Name: " + getName());
-        System.out.println("Address: ");
-        address.getInfo();
-        System.out.println("trip: ");
-        trip.getInfo();
+    @Override
+    public String toString() {
+        return "Customer: " + "\n" +
+                "name='" + name + '\'' + address.toString()
+                + trip + "\n" + "\n";
     }
 }

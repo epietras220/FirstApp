@@ -1,4 +1,4 @@
-package org.pajacyk.cwiczenie3_3;
+package org.pajacyk.travel.office;
 
 public class Date {
     private int day;
@@ -46,10 +46,13 @@ public class Date {
         this.name = name;
     }
 
-    public void getInfo(){
-        System.out.println("Informacje o obiekcie:" + getName());
-        System.out.println("Dzień: " + getDay() + "Miesiąc: " + getMiesiac() + "Rok: " + getRok());
+
+    @Override
+    public String toString() {
+        return ":" + "\n"+
+                "day=" + day + '\''+
+                "miesieac=" + miesieac + '\''+
+                "rok=" + rok + '\''+
+                "name='" + name + '\'' + "\n";
     }
-
-
 }

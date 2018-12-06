@@ -1,33 +1,35 @@
 package org.pajacyk.cwiczenie3_3;
 
+import org.pajacyk.travel.office.Date;
+
 public class Test {
     public static void main(String[] args) {
         Date start = new Date(2015, 7, 23, "start");
         Date end = new Date(2017, 7, 11, "end");
 
         //System.out.print("start: ");
-        start.getInfo();
+        start.toString();
         //System.out.print("end: ");
-        end.getInfo();
+        end.toString();
 
         Date today;
         today = start;
         // System.out.print("today: ");
-        today.getInfo();
+        today.toString();
         today.setRok(2016);
         today.setDay(17);
         today.setName("today");
 
         //System.out.print("today: ");
-        today.getInfo();
+        today.toString();
 
         //System.out.print("start: ");
-        start.getInfo();
+        start.toString();
 
         end = today;
         end.setName("end");
 
         //System.out.print("end");
-        end.getInfo();
+        end.toString();
     }
 }

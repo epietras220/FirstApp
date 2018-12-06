@@ -1,16 +1,16 @@
 package org.pajacyk.travel.office;
 
-import org.pajacyk.cwiczenie3_3.Date;
-
 public class Trip {
     private Date start;
     private Date end;
     private String destination;
+    private double price;
 
-    public Trip(Date start, Date end, String destination) {
+    public Trip(Date start, Date end, String destination, double price) {
         this.start = start;
         this.end = end;
         this.destination = destination;
+        this.price = price;
     }
 
     public Date getStart() {
@@ -37,12 +37,20 @@ public class Trip {
         this.destination = destination;
     }
 
-    public void getInfo() {
-        System.out.println("cel podróży: " + destination);
-        System.out.println("data rozpoczecia wycieczki: ");
-        start.getInfo();
-        System.out.println("data zakończenia wycieczki: ");
-        end.getInfo();
+    public double getPrice() {
+        return price;
     }
 
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Trip: " + "\n"+
+                "start" + start +
+                "end" + end +
+                "destination= " + destination + '\'' +
+                ", price= " + getPrice() + "\n"+ "\n";
+    }
 }
