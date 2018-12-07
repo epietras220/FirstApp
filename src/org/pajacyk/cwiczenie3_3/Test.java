@@ -4,8 +4,8 @@ import org.pajacyk.travel.office.Date;
 
 public class Test {
     public static void main(String[] args) {
-        Date start = new Date(2015, 7, 23, "start");
-        Date end = new Date(2017, 7, 11, "end");
+        Date start = new Date(2015, 7, 23);
+        Date end = new Date(2017, 7, 11);
 
         //System.out.print("start: ");
         start.toString();
@@ -16,7 +16,7 @@ public class Test {
         today = start;
         // System.out.print("today: ");
         today.toString();
-        today.setRok(2016);
+        today.setYear(2016);
         today.setDay(17);
         today.setName("today");
 

@@ -2,15 +2,15 @@ package org.pajacyk.travel.office;
 
 public class Date {
     private int day;
-    private int miesieac;
-    private int rok;
+    private int month;
+    private int year;
     private String name;
 
 
-    public Date(int rok, int miesiac, int day, String name){
+    public Date(int year, int month, int day) {
         this.day = day;
-        this.miesieac = miesiac;
-        this.rok = rok;
+        this.month = month;
+        this.year = year;
         this.name = name;
     }
 
@@ -22,20 +22,20 @@ public class Date {
         this.day = day;
     }
 
-    public int getMiesiac() {
-        return miesieac;
+    public int getMonth() {
+        return month;
     }
 
-    public void setMiesiac(int miesieac) {
-        this.miesieac = miesieac;
+    public void setMonth(int month) {
+        this.month = month;
     }
 
-    public int getRok() {
-        return rok;
+    public int getYear() {
+        return year;
     }
 
-    public void setRok(int rok) {
-        this.rok = rok;
+    public void setYear(int rok) {
+        this.year = rok;
     }
 
     public String getName() {
@@ -49,10 +49,18 @@ public class Date {
 
     @Override
     public String toString() {
-        return ":" + "\n"+
-                "day=" + day + '\''+
-                "miesieac=" + miesieac + '\''+
-                "rok=" + rok + '\''+
-                "name='" + name + '\'' + "\n";
+        return String.format("%4d/%02d/%02d", year, month, day);
     }
+
+    public static Date of(String s, String separator) {
+        String[] array = s.split(separator);
+        if (array.length != 3) {
+            return null;
+        }
+        int year = Integer.parseInt(array[0]);
+        int month = Integer.parseInt(array[1]);
+        int day = Integer.parseInt(array[2]);
+        return new Date(year, month, day);
+    }
+
 }

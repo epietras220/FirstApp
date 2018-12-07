@@ -7,8 +7,8 @@ public class Test {
         TravelOffice travelOffice = new TravelOffice();
 
         //Tworze wycieczke
-        Date start = new Date(2018, 10, 10, "start");
-        Date end = new Date(2018, 10, 20, "end");
+        Date start = new Date(2018, 10, 10);
+        Date end = new Date(2018, 10, 20);
 
         DomesticTrip krajowa = new DomesticTrip(start, end, "Ciechocinek", 500.5);
         krajowa.setOwnArrivalDiscount(200);
@@ -16,7 +16,7 @@ public class Test {
         zagraniczna.setInsurance(300);
         Trip trip = new Trip(start, end, "Bankok", 2000.0);
 
-        //Tworze klienta
+        //Tworze klientów
         Address address = new Address("Wroclawska", "08-045", "Lodz");
         Customer customer = new Customer("Kowalski Jan");
         customer.setAddress(address);
@@ -33,18 +33,6 @@ public class Test {
 
         //wyswietlanie zawartosci
         System.out.println(travelOffice.toString());
-
-
-        //krajowa.setOwnArrivalDiscount(200);
-
-        //customer.assignTrip(trip);
-
-       //customer.assignTrip(zagraniczna);
-
-
-
-
-      //  travelOffice.getCustomerCount();
 
     }
 }
