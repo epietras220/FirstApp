@@ -14,13 +14,15 @@ public class Test {
         krajowa.setOwnArrivalDiscount(200);
         AbroadTrip zagraniczna = new AbroadTrip(start, end, "Wyspy kanaryjskie", 3500.0);
         zagraniczna.setInsurance(300);
-        Trip trip = new Trip(start, end, "Bankok", 2000.0);
+        Trip trip = new AbroadTrip(start, end, "Bankok", 2000.0);
+
 
         //Tworze klientów
         Address address = new Address("Wroclawska", "08-045", "Lodz");
         Customer customer = new Customer("Kowalski Jan");
         customer.setAddress(address);
         customer.assignTrip(zagraniczna);
+        travelOffice.addCustomer(customer);
 
         Address adrress2 = new Address("lodzka", "94-058", "Wroclaw");
         Customer klient2 = new Customer("Nowak Mateusz");

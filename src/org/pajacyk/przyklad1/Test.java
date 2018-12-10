@@ -10,6 +10,10 @@ public class Test {
     }
 
     public static void main(String[] args) {
+        char x = 0;
+        switch (x){
+
+        }
         //new MojTyp();
 //
 //        Number number = new Number();
